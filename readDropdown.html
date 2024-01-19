@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function favBrowser() 
+        {
+            var mylist = document.getElementById("myList")
+            alert(mylist.selectedIndex)
+            document.getElementById("favorite").value = mylist.options[mylist.selectedIndex].text
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Select your favorite browser:
+        <select id="myList" onchange="favBrowser()">
+            <option selected hidden>select</option>
+            <option>Internet Explorer</option>
+            <option>Netscape</option>
+            <option>Opera</option>
+        </select>
+        <p>Your favorite browser is: <input type="text" id="favorite" size="30"></p>
+    </form>
+</body>
+
+</html>
