@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        class Account 
+        {
+            #id;
+            #firstname;
+            #lastname;
+            #balance;
+            static #aid=0;
+            constructor(fname, lname, amt) 
+            {
+                alert(new.target)
+                {
+                     if(new.target === Account)
+                    {  
+                        throw TypeError("Account obj cannot be made !")
+                    }
+                }
+                this.#id=++Account.#aid;
+                this.sfirstname = fname;
+                this.slastname = lname;
+                this.sbalance = amt;
+            }
+            get gid()              { return Account.#aid;}
+            set sfirstname(value)  { this.#firstname = value; }
+            get gfirstname()       { return this.#firstname;  }
+            set slastname(value)   { this.#lastname = value;  }
+            get glastname()        { return this.#lastname;   }
+            set sbalance(value)    { this.#balance = value;   }
+            get gbalance()         { return this.#balance;    } 
+
+            deposit(amt) { this.sbalance = this.gbalance+ amt; }
+
+            toString()   { return `${this.gid}  ${this.gfirstname}  ${this.glastname}  ${this.gbalance}` }
+        }
+        class SavingsAccount extends Account
+        {
+            acctype;
+            constructor(acctype,fname,lname,amt)
+            {
+                super(fname,lname,amt)
+                this.type=acctype;
+            }
+
+            withdraw(amt) 
+            { 
+                const minBal = 1000;
+                if(amt>(this.balance-minBal))
+                    throw new TypeError("InSufficient Balance !")
+                this.sbalance = this.gbalance - amt; 
+            }
+        }
+        class CurrentAccount extends Account
+        {
+            acctype;
+            constructor(acctype,fname,lname,amt)
+            {
+                super(fname,lname,amt)
+                this.type=acctype;
+            }
+
+            withdraw(amt) 
+            { 
+                this.sbalance = this.gbalance - amt; 
+            }
+        }
+
+        var obj=new SavingsAccount("sav","Sanket","More",69);
+        obj.deposit(6900);
+        document.write(obj);
+        obj.withdraw(69);
+        document.write("<br>"+obj);
+
+        var obj1=new CurrentAccount("curr","Rohit","Maskar",25);
+        obj1.deposit(100000);
+        document.write("<br><br>"+obj1);
+        obj1.withdraw(100000);
+        document.write("<br>"+obj1);      
+</script>
+</body>
+</html>
