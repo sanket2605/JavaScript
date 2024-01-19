@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sum Calculator</title>
+    <script>
+        function calculateSum() {
+            // Get the values from the input text boxes
+     var num1 = parseFloat(document.getElementById('num1').value)||0;
+     var num2 = parseFloat(document.getElementById('num2').value)||0;
+
+            // Perform Addition
+            var res = num1 + num2;
+
+            // Display the sum in the result text box
+            document.getElementById('result').value = res;
+        }
+        function calculateDiff() {
+            // Get the values from the input text boxes
+     var num1 = parseFloat(document.getElementById('num1').value)||0;
+     var num2 = parseFloat(document.getElementById('num2').value)||0;
+
+            // Perform Subtraction
+            var res = num1 - num2;
+
+            // Display the sum in the result text box
+            document.getElementById('result').value = res;
+        }
+        function calculateProd() {
+            // Get the values from the input text boxes
+     var num1 = parseFloat(document.getElementById('num1').value)||0;
+     var num2 = parseFloat(document.getElementById('num2').value)||1;
+
+            // Perform Multiplication
+            var res = num1 * num2;
+
+            // Display the sum in the result text box
+            document.getElementById('result').value = res;
+        }
+        function calculateDiv() {
+            // Get the values from the input text boxes
+     var num1 = parseFloat(document.getElementById('num1').value)||0;
+     var num2 = parseFloat(document.getElementById('num2').value)||1;
+
+            // Perform Division
+            var res = num1 / num2;
+
+            // Display the sum in the result text box
+            document.getElementById('result').value = res;
+        }
+      function calculateMod() {
+            // Get the values from the input text boxes
+     var num1 = parseFloat(document.getElementById('num1').value)||0;
+     var num2 = parseFloat(document.getElementById('num2').value)||1;
+
+            // Perform Division
+            var res = num1 % num2;
+
+            // Display the sum in the result text box
+            document.getElementById('result').value = res;
+        }
+    </script>
+</head>
+<body>
+    <h2>Simple Sum Calculator</h2>
+
+    <label for="num1">Enter number 1:</label>
+    <input type="text" id="num1" placeholder="Enter a number">
+
+    <br>
+
+    <label for="num2">Enter number 2:</label>
+    <input type="text" id="num2" placeholder="Enter a number">
+
+    <br>
+
+    <label for="result">Result:</label>
+    <input type="text" id="result" readonly>
+
+    <br>
+
+    <button onclick="calculateSum()" >Calculate Sum</button>
+    <button onclick="calculateDiff()" >Calculate Difference</button><br>
+    <button onclick="calculateProd()" >Calculate Product</button>
+    <button onclick="calculateDiv()" >Calculate Division</button><br>
+  <button onclick="calculateMod()" >Calculate Modulus</button>
+</body>
+</html>
