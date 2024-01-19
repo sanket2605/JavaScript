@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function startTime() 
+        {
+            var today = new Date()
+            //document.write(today);
+            var h = today.getHours()
+            var m = today.getMinutes()
+            var s = today.getSeconds()
+            var d = today.getDay();
+            var mn = today.toLocaleString('default', { month: 'long' });
+            var dt = today.getDate(); 
+            // add a zero in front of numbers<10 m=checkTime(m) s=checkTime(s) h=checkTime(h)
+            document.getElementById('txt').innerHTML = "Day of the Week:" + d + "\t Month:" + mn + "\tDate:" + dt + "\t" + h + ":" + m + ":" + s 
+            t = setTimeout('startTime()', 500)//500miliseconds  
+        }
+            function checkTime(i) 
+            { 
+                if (i < 10) 
+                { 
+                    i = "0" + i 
+                }
+                return i 
+            }
+    </script>
+</head>
+
+<body onload="startTime()" >
+    <div id="txt" align="right"></div>
+</body>
+
+</html>
