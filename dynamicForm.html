@@ -1,0 +1,44 @@
+<html>
+<script>
+    function call() {
+        var f = document.createElement('form') 
+    f.name = 'frm'
+    var t = document.createElement('input')
+        t.type = 'text'
+        t.maxlength = 5;
+        t.name = "t1"
+        r1 = document.createElement('input')
+        l1 = document.createElement('label')
+        r2 = document.createElement('input')
+        l2 = document.createElement('label')
+        r1.type = "radio"
+        r2.type = "radio"
+        r1.name = "nm"
+        r2.name = "nm"
+        newText1 = document.createTextNode("yes");
+        newText2 = document.createTextNode("No");
+        l1.appendChild(newText1);
+        l2.appendChild(newText2);
+        var s = document.createElement('select')
+        var o = document.createElement('option')
+        var o1 = document.createElement('option')
+        o.innerHTML = "India";
+        o1.innerHTML = "USA";
+        s.appendChild(o);
+        s.appendChild(o1);
+
+        f.appendChild(t);
+        f.appendChild(r1);
+        f.appendChild(l1);
+        f.appendChild(r2);
+        f.appendChild(l2);
+        f.appendChild(s);
+        //f.appendChild(c1);
+        document.getElementById('dd').appendChild(f);
+    }
+</script>
+
+<body>
+    <input type="button" onclick="call()" />
+    <div id='dd'> </div>
+</body>
