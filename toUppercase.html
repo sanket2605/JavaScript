@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+
+Input: <input type="text" id="input" ><br><span id="result"></span>
+<script>
+    document.getElementById("input").oninput = function () 
+    {
+        let s = document.getElementById("input").value;
+        
+       document.getElementById("result").innerHTML = s.toUpperCase(); 
+    };
+</script>
