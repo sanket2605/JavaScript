@@ -1,0 +1,36 @@
+/* NoPage.css */
+
+.no-page-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #e74c3c;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  /* Optional: Add some animation for a more engaging look */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .no-page-container {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
